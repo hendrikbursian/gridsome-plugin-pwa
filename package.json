@@ -1,13 +1,13 @@
 {
-  "name": "gridsome-plugin-pwa",
+  "name": "@hendrikbursian/gridsome-plugin-pwa",
   "version": "0.0.18",
   "description": "PWA plugin for Gridsome",
   "main": "index.js",
-  "author": "rishabh3112",
+  "author": "hendrikbursian",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rishabh3112/gridsome-plugin-pwa"
+    "url": "git+https://github.com/hendrikbursian/gridsome-plugin-pwa.git"
   },
   "scripts": {
     "build": "babel src -d ./",
