@@ -18,7 +18,7 @@ const clientConfig = function (Vue, options, context) {
         console.log('New content is downloading.')
       },
       updated (registration) {
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' });  
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
         console.log('New content is available; please refresh.')
       },
       offline () {
@@ -97,7 +97,7 @@ const clientConfig = function (Vue, options, context) {
       content: options.msTileColor
     })
   }
-  
+
   head.meta.push({
     name: 'msapplication-TileImage',
     content: msTileImage
