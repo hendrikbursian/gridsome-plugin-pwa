@@ -1,20 +1,31 @@
 {
   "name": "@hendrikbursian/gridsome-plugin-pwa",
-  "version": "0.0.18",
+  "version": "0.0.0",
   "description": "PWA plugin for Gridsome",
   "main": "index.js",
-  "author": "hendrikbursian",
+  "author": {
+    "email": "hendrikbursian@protonmail.com",
+    "name": "Hendrik Bursian"
+  },
   "license": "MIT",
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hendrikbursian/gridsome-plugin-pwa.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "babel src -d ./",
     "test": "echo \"tests not created\""
   },
   "keywords": [
-    "gridsome-plugin"
+    "gridsome-plugin",
+    "gridsome",
+    "pwa",
+    "service-worker",
+    "manifest"
   ],
   "devDependencies": {
     "@babel/cli": "^7.5.0",
