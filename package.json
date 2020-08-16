@@ -18,7 +18,6 @@
   },
   "scripts": {
     "build": "babel src -d ./",
-    "release": "babel src -d ./ && np",
     "test": "echo \"Tests not specified.\""
   },
   "keywords": [
