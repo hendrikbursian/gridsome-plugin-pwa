@@ -17,7 +17,7 @@ const clientConfig = function (Vue, options, context) {
         console.log('New content is downloading.')
       },
       updated (registration) {
-        registration.waiting.postMessage({ type: 'SKIP_WAITING' });  
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
         console.log('New content is available; please refresh.')
       },
       offline () {
@@ -29,9 +29,17 @@ const clientConfig = function (Vue, options, context) {
     })
   }
 
-  const iconsDir = 'assets/static/';
+  const iconsDir = '/assets/static/';
   const iconName = options.icon.split('/').slice(-1)[0];
-  const msTileImage = `/${iconsDir}${iconName}-144x144.png`;
+  const iconNameDotIdx = iconName.lastIndexOf('.');
+
+  var msTileImage = iconsDir;
+
+  if(iconNameDotIdx > -1) {
+    msTileImage += `${iconName.substring(0, iconNameDotIdx)}-144x144${iconName.substring(iconNameDotIdx)}`
+  } else {
+    msTileImage += `${iconName}-144x144`
+  }
 
   head.link.push({
     rel: 'manifest',
@@ -96,7 +104,7 @@ const clientConfig = function (Vue, options, context) {
       content: options.msTileColor
     })
   }
-  
+
   head.meta.push({
     name: 'msapplication-TileImage',
     content: msTileImage
