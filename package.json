@@ -18,7 +18,8 @@
   },
   "scripts": {
     "build": "babel src -d ./",
-    "test": "echo \"tests not created\""
+    "release": "babel src -d ./ && np",
+    "test": "echo \"Tests not specified.\""
   },
   "keywords": [
     "gridsome-plugin",
@@ -28,17 +29,15 @@
     "manifest"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.5.0",
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4"
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.11.1",
+    "@babel/preset-env": "7.11.0",
+    "np": "6.4.0"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0",
-    "register-service-worker": "^1.6.2",
-    "rename": "^1.0.4",
-    "workbox-build": "^5.1.2"
-  },
-  "peerDependencies": {
-    "sharp": "0.25.x"
+    "fs-extra": "9.0.1",
+    "register-service-worker": "1.7.1",
+    "rename": "1.0.4",
+    "workbox-build": "5.1.3"
   }
 }
